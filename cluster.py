@@ -37,7 +37,7 @@ def readandwrite(timestamp, arr):
        elif fix_mode:
            words = str(line).split()
            if words[0] in arr:
-               if words[1] == '2':
+               if words[1] == '2': # Considering only the oxygen atom
                    words[1]='3'
                line_stack.append(' '.join(words)+'\n')
            else:
@@ -49,7 +49,7 @@ safe_start = True
 start_line = False
 cnt = 0
 num = 0
-timestamp = 81884000
+timestamp = 81884000 # Doesn't matter
 try:
    readandwrite(timestamp, [])
    arr =[]
