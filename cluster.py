@@ -71,11 +71,15 @@ start_line = False
 cnt = 0
 num = 0
 timestamp = 81884000
+def initGraph(case):
+    if case<2:
+        return nx.Graph()
+    else:
+        return nx.DiGraph()
 try:
    readandwrite(timestamp, [])
    arr =[]
-   if (case < 2): G = nx.Graph()
-   else: G = nx.DiGraph()
+   G=initGraph(case)
    while True:
        line = str(f.readline())
        num += 1
@@ -120,8 +124,7 @@ try:
                #print len(tmp)
                #print tmp
                readandwrite(timestamp, list(set(tmp)))
-           if (case < 2): G=nx.Graph()           
-           else: G=nx.DiGraph()
+           G=initGraph(case)
            arr=[]
        else:
            #print line
