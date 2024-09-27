@@ -1,5 +1,7 @@
 # Time Correlation Analysis with Clustering
 
+**Authors:** Jaehyeok Jin and Youngbae Jeon
+
 This repository contains a Python script that performs time correlation analysis, clustering, and manipulation of trajectory data from molecular simulations. The script utilizes `networkx` for graph analysis to identify clusters in the simulation and processes the trajectory data accordingly.
 
 ## Features
